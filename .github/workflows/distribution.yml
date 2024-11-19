@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: uv sync
       - name: Create distribution
-        run: uv run pyinstaller src/aether/app.py
+        run: uv run pyinstaller src/main.py
       - name: Save artifacts
         uses: actions/upload-artifact@v4
         with:
