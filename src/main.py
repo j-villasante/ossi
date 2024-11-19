@@ -2,7 +2,7 @@ from serial import Serial, EIGHTBITS, PARITY_NONE, STOPBITS_ONE
 from time import sleep
 
 s = Serial(
-    port="/dev/ttyUSB0",
+    port="COM1",
     baudrate=9600,
     bytesize=EIGHTBITS,
     parity=PARITY_NONE,
