@@ -1,0 +1,27 @@
+name: Project windows distribution
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  distribution:
+    runs-on: windows-2019
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Poetry install
+        run: pip install uv
+      - name: Install dependencies
+        run: uv sync
+      - name: Create distribution
+        run: uv run pyinstaller src/aether/app.py
+      - name: Save artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: dist/

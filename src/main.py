@@ -21,7 +21,7 @@ current = open("current", "wb")
 history = open("history", "wb")
 
 while True:
-    s.write(f"CURVe")
+    s.write(b"CURVe")
     r = s.readline()
     
     current.seek(0)
