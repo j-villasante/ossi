@@ -16,18 +16,23 @@ s = Serial(
     exclusive=True,
 )
 
+print("hi")
 
-current = open("current", "wb")
-history = open("history", "wb")
+s.write(b"*IDN?")
 
-while True:
-    s.write(b"CURVe")
-    r = s.readline()
+print(s.readline())
+
+# current = open("current", "wb")
+# history = open("history", "wb")
+
+# while True:
+#     s.write(b"CURVe")
+#     r = s.readline()
     
-    current.seek(0)
-    current.truncate(0)
-    current.write(r)
+#     current.seek(0)
+#     current.truncate(0)
+#     current.write(r)
 
-    history.write(r + b"\n")
+#     history.write(r + b"\n")
 
-    sleep(1)
+#     sleep(1)
