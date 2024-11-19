@@ -20,7 +20,7 @@ s.open()
 
 print("hi")
 
-s.write(b"*IDN?")
+s.write("*IDN?".encode("ascii"))
 
 print(s.read_until())
 
