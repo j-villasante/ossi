@@ -7,7 +7,7 @@ s = Serial(
     bytesize=EIGHTBITS,
     parity=PARITY_NONE,
     stopbits=STOPBITS_ONE,
-    timeout=None,
+    timeout=10,
     xonxoff=False,
     rtscts=True,
     dsrdtr=False,
@@ -20,7 +20,9 @@ print("hi")
 
 s.write(b"*IDN?")
 
-print(s.readline())
+print(s.read_until())
+
+print("finished")
 
 # current = open("current", "wb")
 # history = open("history", "wb")
