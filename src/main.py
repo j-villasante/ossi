@@ -16,6 +16,8 @@ s = Serial(
     exclusive=True,
 )
 
+s.open()
+
 print("hi")
 
 s.write(b"*IDN?")
@@ -23,6 +25,8 @@ s.write(b"*IDN?")
 print(s.read_until())
 
 print("finished")
+
+s.close()
 
 # current = open("current", "wb")
 # history = open("history", "wb")
