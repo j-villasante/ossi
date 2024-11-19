@@ -1,0 +1,7 @@
+DATa:SOUrce CH1
+DATa:ENCdg RIBinary
+DATa:WIDth 2
+DATa:STARt 1
+DATa:STOP 2500
+WFMPre?
+CURVe
