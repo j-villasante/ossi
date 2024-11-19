@@ -16,8 +16,6 @@ s = Serial(
     exclusive=True,
 )
 
-s.open()
-
 print("hi")
 
 s.write("*IDN?".encode("ascii"))
